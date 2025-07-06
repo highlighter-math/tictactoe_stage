@@ -4,9 +4,6 @@ import Link from 'next/link';
 import Button from '@mui/material/Button';
 
 export default function HomePage() {
-  const handleClick = () => {
-    console.log("クリックされました");
-  };
   return (
     <div
       style={{
