@@ -1,9 +1,43 @@
+'use client';
+
 import Grid from "@/components/Grid";
+import Link from 'next/link';
+import Button from '@mui/material/Button';
 
 export default function HomePage() {
+  const handleClick = () => {
+    console.log("クリックされました");
+  };
   return (
-    <main style={{ padding: "20px" }}>
-      <Grid />
-    </main>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh', // 画面の高さ全体
+        gap: '16px',     // ボタン間の隙間
+      }}
+    >
+      <Link href="/problem1" passHref>
+        <Button component="div" variant="outlined" size="medium" sx={{
+          width: '200px',
+          height: '60px',
+          fontSize: '18px',
+          padding: '12px 24px',
+        }}>
+          Problem1
+        </Button>
+      </Link>
+      <Link href="/problem2" passHref>
+        <Button component="div" variant="outlined" size="medium" sx={{
+          width: '200px',
+          height: '60px',
+          fontSize: '18px',
+          padding: '12px 24px',
+        }}>
+          Problem2
+        </Button>
+      </Link>
+    </div>
   );
 }
