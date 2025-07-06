@@ -84,7 +84,7 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
       </div>
 
       {/* 中央の文字列 */}
-      <div>{answer.slice(0, visibleCount).padEnd(answer.length, "_")}</div>
+      <div style={{position: "relative", top: "18%"}}>{answer.slice(0, visibleCount).padEnd(answer.length, "_")}</div>
 
       {/* 画像（あれば） */}
       {imageSrc && (
@@ -92,11 +92,13 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
           src={`${basePath}/images/${imageSrc}`}
           alt={answer}
           style={{
-            height: "60%",
-            width: "60%",
+            position: "relative",
+            top: "7%",
+            width: "65%",
             display: "block",
             marginLeft: "auto",
             marginRight: "auto",
+            marginTop: "10%",
           }}
         />
       )}
