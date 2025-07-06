@@ -4,12 +4,16 @@ import Grid2 from "@/components/Grid2";
 import { Fab } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
+const prod = process.env.NODE_ENV === "production";
+const basePath = prod ? "/tictactoe_stage/" : "/";
+
 export default function HomePage() {
   return (
     <main style={{ padding: "20px" }}>
       <Grid2 />
       <Fab
-      href="../"
+      href={basePath}
+      onClick={()=>alert(basePath)}
       color="primary"
       aria-label="add"
       sx={{
