@@ -1,0 +1,74 @@
+.header {
+  background-color: black;
+  height: 70px; /* 適宜調整 */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+  position: relative;
+}
+
+.arrows {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.arrow {
+  width: 30px;
+  height: 40px;
+  background: white;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.topRightSquares {
+  display: flex;
+  gap: 4px;
+}
+
+.squareWhite {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+.squareBlue {
+  width: 20px;
+  height: 20px;
+  background-color: #214ebf; /* 青色 */
+}
+
+.footer {
+  background-color: black;
+  height: 40px; /* 適宜調整 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  color: white;
+  font-family: "Yu Mincho", serif;
+  font-size: 14px;
+}
+
+.bottomLeftSquares {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.squareRed {
+  width: 20px;
+  height: 20px;
+  background-color: #ba0000; /* 赤色 */
+}
+
+.squareWhite {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+.bottomRightText {
+  font-weight: bold;
+}

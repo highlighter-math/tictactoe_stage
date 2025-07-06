@@ -1,5 +1,7 @@
 // app/layout.tsx
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { ReactNode } from "react";
 
 export const metadata = {
@@ -9,7 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
