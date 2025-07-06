@@ -13,7 +13,6 @@ export default function HomePage() {
       <Grid />
       <Fab
       href={basePath}
-      onClick={()=>alert(basePath)}
       color="primary"
       aria-label="add"
       sx={{
