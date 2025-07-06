@@ -5,7 +5,7 @@ import { Fab } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const prod = process.env.NODE_ENV === "production";
-const basePath = prod ? "/tictactoe_stage" : "";
+const basePath = prod ? "tictactoe_stage" : "";
 
 export default function HomePage() {
   return (
@@ -13,6 +13,7 @@ export default function HomePage() {
       <Grid />
       <Fab
       href={basePath+"/"}
+      onClick={()=>alert(basePath)}
       color="primary"
       aria-label="add"
       sx={{
