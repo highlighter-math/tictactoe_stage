@@ -10,8 +10,8 @@ export default function HomePage() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh', // 画面の高さ全体
-        gap: '16px',     // ボタン間の隙間
+        height: '100vh',
+        gap: '16px',
       }}
     >
       <Link href="/problem1" passHref>

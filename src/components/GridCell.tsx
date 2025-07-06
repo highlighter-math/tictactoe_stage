@@ -34,7 +34,7 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
   };
 
   const handleUndo = (e: React.MouseEvent) => {
-    e.stopPropagation(); // セルクリックとバッティングしないように
+    e.stopPropagation();
     if (visibleCountHistory.length > 0) {
       const prevHistory = [...visibleCountHistory];
       const last = prevHistory.pop()!;
@@ -67,10 +67,9 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
       className="cell"
       style={{
         backgroundColor,
-        position: "relative", // 子要素の absolute 配置のため
+        position: "relative",
       }}
     >
-      {/* 左上の番号 */}
       <div
         style={{
           position: "absolute",
@@ -83,10 +82,8 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
         {getCircledNumber(index)}
       </div>
 
-      {/* 中央の文字列 */}
       <div style={{position: "relative", top: "18%"}}>{answer.slice(0, visibleCount).padEnd(answer.length, "_")}</div>
 
-      {/* 画像（あれば） */}
       {imageSrc && (
         <img
           src={`${basePath}/images/${imageSrc}`}
@@ -103,7 +100,6 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
         />
       )}
 
-      {/* 巻き戻しボタン */}
       {visibleCount > 0 && (
         <button
           onClick={handleUndo}
