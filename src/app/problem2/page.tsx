@@ -9,7 +9,7 @@ export default function HomePage() {
     <main style={{ padding: "20px" }}>
       <Grid2 />
       <Fab
-      href="/"
+      href="../"
       color="primary"
       aria-label="add"
       sx={{
