@@ -7,7 +7,7 @@ import { ZoomInMap, ZoomOutMap } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
-  problem_id: number;   // ← Grid.tsxから渡す
+  problem_id: number;
   answer: string;
   index: number;
   imageSrc?: string;
@@ -34,7 +34,6 @@ export default function GridCell({ problem_id, answer, imageSrc, index }: Props)
   const visibleCount = visibleCountHistory[visibleCountHistory.length - 1] ?? 0;
   const isFullyRevealed = visibleCount >= answer.length;
 
-  // 初回マウント時に localStorage から復元
   useEffect(() => {
     setMounted(true);
     try {
@@ -49,7 +48,6 @@ export default function GridCell({ problem_id, answer, imageSrc, index }: Props)
     }
   }, [storageKey]);
 
-  // 状態が変わるたびに保存
   useEffect(() => {
     if (mounted) {
       localStorage.setItem(
