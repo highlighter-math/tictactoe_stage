@@ -6,10 +6,10 @@ const cells = [
   { answer: "フッ素", image: "フッ素.gif" },
   { answer: "ホウ素", image: "ホウ素.gif" },
   { answer: "ラジウム", image: "ラジウム.gif" },
-  { answer: "ルテチウム", image: "ルテチウム.gif" },
+  { answer: "ナトリウム", image: "ナトリウム.png" },
   { answer: "いおう", image: "硫黄.png" },
   { answer: "すいぎん", image: "水銀.gif" },
-  { answer: "すい素", image: "水素.gif" },
+  { answer: "ヘリウム", image: "ヘリウム.png" },
   { answer: "プラチナ", image: "プラチナ.png" }
 ];
 
