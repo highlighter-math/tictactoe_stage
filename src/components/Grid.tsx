@@ -10,7 +10,7 @@ const cells = [
   { answer: "いおう", image: "硫黄.png" },
   { answer: "すいぎん", image: "水銀.gif" },
   { answer: "すい素", image: "水素.gif" },
-  { answer: "たん素", image: "炭素.gif" }
+  { answer: "プラチナ", image: "プラチナ.png" }
 ];
 
 const Grid = () => {
