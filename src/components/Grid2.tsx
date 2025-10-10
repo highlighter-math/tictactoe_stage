@@ -4,7 +4,7 @@ import "./grid.css";
 const cells = [
   { answer: "イスラエル", image: "イスラエル.png" },
   { answer: "インド", image: "インド.png" },
-  { answer: "サウジアラビア", image: "サウジアラビア.png" },
+  { answer: "ロシア", image: "ロシア.png" },
   { answer: "スペイン", image: "スペイン.png" },
   { answer: "ウズベキスタン", image: "ウズベキスタン.png" },
   { answer: "クロアチア", image: "クロアチア.png" },
