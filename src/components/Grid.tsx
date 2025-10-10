@@ -7,7 +7,7 @@ const cells = [
   { answer: "ホウ素", image: "ホウ素.gif" },
   { answer: "ラジウム", image: "ラジウム.gif" },
   { answer: "ルテチウム", image: "ルテチウム.gif" },
-  { answer: "しゅう素", image: "臭素.gif" },
+  { answer: "いおう", image: "硫黄.png" },
   { answer: "すいぎん", image: "水銀.gif" },
   { answer: "すい素", image: "水素.gif" },
   { answer: "たん素", image: "炭素.gif" }
