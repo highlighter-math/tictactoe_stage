@@ -2,15 +2,15 @@ import GridCell from "./GridCell";
 import "./grid.css";
 
 const cells = [
-  { answer: "ウクライナ", image: "ウクライナ.png" },
+  { answer: "イスラエル", image: "イスラエル.png" },
   { answer: "インド", image: "インド.png" },
-  { answer: "カナダ", image: "カナダ.png" },
-  { answer: "タイ", image: "タイ.png" },
-  { answer: "エルサルバドル", image: "エルサルバドル.png" },
-  { answer: "ベルギー", image: "ベルギー.png" },
+  { answer: "サウジアラビア", image: "サウジアラビア.png" },
+  { answer: "スペイン", image: "スペイン.png" },
+  { answer: "ウズベキスタン", image: "ウズベキスタン.png" },
+  { answer: "クロアチア", image: "クロアチア.png" },
   { answer: "コートジボワール", image: "コートジボワール.png" },
-  { answer: "カタール", image: "カタール.png" },
-  { answer: "ロシア", image: "ロシア.png" }
+  { answer: "トルコ", image: "トルコ.png" },
+  { answer: "スイス", image: "スイス.png" }
 ];
 
 const Grid2 = () => {
