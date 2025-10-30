@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vh;
+  width: 90vh;
+  margin: 0 auto;
+}
+
+.cell {
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 4vh;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
