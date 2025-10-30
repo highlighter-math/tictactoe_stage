@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { IconButton } from "@mui/material";
-import { ZoomInMap, ZoomOutMap } from "@mui/icons-material";
+import { ZoomInMap, ZoomOutMap, Undo } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
@@ -79,7 +79,7 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
           position: "absolute",
           top: "0.2vh",
           left: "0.5vh",
-          fontSize: "5vh",
+          fontSize: "1.5rem",
           color: "#666",
         }}
       >
@@ -95,8 +95,8 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
           position: "absolute",
           top: "5%",
           right: "5%",
-          width: "10%",
-          height: "10%",
+          width: "15%",
+          height: "15%",
           color: "#333",
           fontSize: "clamp(1rem, 2vw, 2.5rem)",
           minWidth: 0,
@@ -107,24 +107,26 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
       </IconButton>
 
       {visibleCount > 0 && (
-        <button
+        <IconButton
           onClick={handleUndo}
-          style={{
+          sx={{
             position: "absolute",
             bottom: 5,
             right: 5,
-            fontSize: "3vh",
-            padding: "0.2em 0.4em",
-            background: "#eee",
-            border: "1px solid #aaa",
-            borderRadius: "4px",
-            cursor: "pointer",
-            zIndex: "0",
+            width: "20%",
+            height: "20%",
+            color: "#333",
+            backgroundColor: "transparent",
+            zIndex: 0,
+            "&:hover": {
+              backgroundColor: "rgba(0,0,0,0.05)",
+            },
           }}
         >
-          ⟲
-        </button>
+          <Undo sx={{ width: "120%", height: "120%" }} />
+        </IconButton>
       )}
+
 
       <div style={{ marginTop: "2vh", fontSize: "3vh" }}>
         {answer.slice(0, visibleCount).padEnd(answer.length, "_")}
@@ -161,22 +163,24 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
       </div>
 
       {visibleCount > 0 && (
-        <button
+        <IconButton
           onClick={handleUndo}
-          style={{
+          sx={{
             position: "absolute",
-            bottom: "5px",
-            right: "5px",
-            fontSize: "3vh",
-            padding: "0.2em 0.4em",
-            background: "#eee",
-            border: "1px solid #aaa",
-            borderRadius: "4px",
-            cursor: "pointer",
+            bottom: 5,
+            right: 5,
+            width: "20%",
+            height: "20%",
+            color: "#333",
+            backgroundColor: "transparent",
+            zIndex: 0,
+            "&:hover": {
+              backgroundColor: "rgba(0,0,0,0.05)",
+            },
           }}
         >
-          ⟲
-        </button>
+          <Undo sx={{ width: "100%", height: "100%" }} />
+        </IconButton>
       )}
 
       <div style={{ marginTop: "5vh", fontSize: "8vh" }}>
@@ -242,8 +246,8 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
                 exit={{ scale: 0.8 }}
                 transition={{ duration: 0.15 }}
                 onClick={(e) => {
-                  e.stopPropagation();
                   handleClick();
+                  e.stopPropagation();
                 }}
                 style={{
                   backgroundColor,
@@ -256,7 +260,10 @@ export default function GridCell({ answer, imageSrc, index }: Props) {
                 }}
               >
                 <IconButton
-                  onClick={() => setIsZoomed(false)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsZoomed(false);
+                  }}
                   sx={{
                     position: "absolute",
                     top: "5%",
