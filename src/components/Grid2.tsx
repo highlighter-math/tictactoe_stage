@@ -9,7 +9,7 @@ const cells = [
   { answer: "スウェーデン", image: "スウェーデン.png" },
   { answer: "インド", image: "インド.png" },
   { answer: "モナコ", image: "モナコ.png" },
-  { answer: "イタリア", image: "イタリア.png" },
+  { answer: "トウキョウ", image: "トウキョウ.png" },
   { answer: "バチカン市国", image: "バチカン市国.png" }
 ];
 
